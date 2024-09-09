@@ -1,0 +1,30 @@
+modules = ["bash"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Build Custom Arch Linux ISO"
+
+[[workflows.workflow]]
+name = "Build Custom Arch Linux ISO"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "bash build_iso.sh"
+
+[deployment]
+run = ["sh", "-c", "bash build_iso.sh"]

@@ -1,0 +1,43 @@
+# Base packages
+base
+linux
+linux-headers
+linux-firmware
+linux-zen
+linux-zen-headers
+mkinitcpio
+mkinitcpio-archiso
+
+# ZFS packages
+zfs-dkms
+zfs-utils
+
+# Useful tools
+vim
+nano
+git
+wget
+curl
+htop
+neofetch
+
+# Network tools
+networkmanager
+dhcpcd
+wpa_supplicant
+
+# Bootloader
+grub
+efibootmgr
+
+# Filesystem tools
+e2fsprogs
+dosfstools
+ntfs-3g
+
+# Compression
+gzip
+xz
+
+# Additional tools
+arch-install-scripts
